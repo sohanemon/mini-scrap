@@ -7,7 +7,7 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-app.get('/data', async (req, res) => {
+app.get('/', async (req, res) => {
   const url =
     'https://www.rated.network/o/snc.xyz?network=mainnet&timeWindow=all&viewBy=operator&page=1';
   const b = await puppeteer.launch({ headless: 'new', args: ['--no-sandbox'] });
